@@ -18,7 +18,7 @@ class Task
 	int begining_date; //дата начала выполнения задачи
 	int finishing_date; //дата окончания выполнения задачи
 	Status status{ Status::not_started }; //статус выполнения задачи
-	vector <Executor> executors; //исполнители задачи
+	vector <Executor> executors{'1'}; //исполнители задачи
 public:
 	Lvl getPriority()
 	{
@@ -34,12 +34,13 @@ public:
 };
 class Executor
 {
-	string login="1";
+	string login;
 public:
-	Executor(string _login)
+	Executor(string _login="1")
 	{
 		this->login = _login;
 	}
+	Executor() {};
 	void setLogin(string _login)
 	{
 		this->login = _login;
