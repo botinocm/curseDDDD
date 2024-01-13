@@ -50,9 +50,3 @@ public:
 		return this->login;
 	}
 };
-
-int main()
-{
-	Status rofl = Status::failed;
-	cout << static_cast <int> (rofl);
-}
